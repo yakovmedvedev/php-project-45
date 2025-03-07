@@ -1,6 +1,6 @@
 {
     "name": "hexlet/code",
-    "description": "Games of Minde-project",
+    "description": "Games of Mind-project",
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"

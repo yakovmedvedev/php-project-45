@@ -1,8 +1,9 @@
-<?php
 #!/usr/bin/env php
+<?php
 
+require_once __DIR__ . '/../vendor/autoload.php';
 
-echo "Welcome to the Brain Games!\n
-May I have your name?\n
-John\n
-Hello, John!";
+use function BrainGames\Cli\welcome;
+//use function php\project\45\Cli\welcome as BrainGames\Cli\welcome;
+
+welcome();

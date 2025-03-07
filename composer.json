@@ -1,21 +1,21 @@
 {
     "name": "hexlet/code",
     "description": "Games of Mind-project",
-    "autoload": {
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Yakov Medvedev",
             "email": "yakovmedvedev@gmail.com"
         }
     ],
+    "autoload": {
+            "files": [
+                "src/Cli.php"
+            ]
+    },
     "bin": [
         "bin/brain-games"
     ],
     "require": {
-        "wp-cli/php-cli-tools": "^0.12.4"
+        "wp-cli/php-cli-tools": "^0.12.1"
     }
 }

@@ -1,0 +1,16 @@
+{
+    "name": "hexlet/code",
+    "description": "Games of Minde-project",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yakov Medvedev",
+            "email": "yakovmedvedev@gmail.com"
+        }
+    ],
+    "require": {}
+}

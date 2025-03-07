@@ -12,5 +12,8 @@
             "email": "yakovmedvedev@gmail.com"
         }
     ],
+    "bin": [
+        "bin/brain-games"
+    ],
     "require": {}
 }

@@ -2,4 +2,7 @@
 #!/usr/bin/env php
 
 
-echo 'Welcome to the Brain Games!';
+echo "Welcome to the Brain Games!\n
+May I have your name?\n
+John\n
+Hello, John!";

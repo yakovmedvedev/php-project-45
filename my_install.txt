@@ -5,7 +5,7 @@
 5.Создать bin/brain-games.php. Чтобы brain-games.php выводил на экран строку:
 php bin/brain-games.php
 Welcome to the Brain Games!
-
+_______________
 6.Создайте Makefile с командой install, выполняющей composer install
 7.Добавьте директорию vendor в файл .gitignore.
 8.Добавьте в Makefile команду brain-games: php bin/brain-games.php
@@ -18,4 +18,32 @@ Welcome to the Brain Games!
 12.bin/brain-games права на исполнение - chmod +x bin/brain-games
 13.Измените команду brain-games в Makefile: ./bin/brain-games
 14.в Makefile команду validate, которая выполнит composer validate
+________________
+15. composer require wp-cli/php-cli-tools
+16../bin/brain-games
+Welcome to the Brain Games!
+May I have your name? John
+Hello, John!
+17.touch Cli.php :
+<?php
+
+use function cli\line;
+use function cli\prompt;
+
+line('Welcome to the Brain Game!');
+$name = prompt('May I have your name?');
+line("Hello, %s!", $name);
+18. Cli.php: namespace BrainGames\Cli;
+19.bin/brain-games:
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use function BrainGames\Cli\welcome;
+//use function php\project\45\Cli\welcome as BrainGames\Cli\welcome;
+
+welcome();
+__________________
+
 

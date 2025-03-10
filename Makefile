@@ -7,3 +7,6 @@ brain-games:
 
 validate:
 	composer validate
+
+update:
+	composer update

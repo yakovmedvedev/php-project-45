@@ -2,7 +2,8 @@
 2.Composer глобально
 3.Склонировать репо php-project-45 (локально можно переименовать)
 4.Инициализация composer init. имя пакета - hexlet/code.
-5.~$ touch bin/brain-games.php: echo 'Welcome to the Brain Games!'
+5.~$ mkdir bin
+~$ echo 'Welcome to the Brain Games!' > bin/brain-games.php
 ~$ php bin/brain-games.php
 Welcome to the Brain Games!
 _______________
@@ -15,16 +16,16 @@ _______________
 "bin": [
   "bin/brain-games"
 ] - благодаря этой строчке пакет будет выполняться как программа brain-games
-12.chmod +x bin/brain-games
-13.Измените команду brain-games в Makefile: ./bin/brain-games
-14.в Makefile команду validate, которая выполнит composer validate
+12.~$ chmod +x bin/brain-games
+13.Makefile: изменить команду brain-games на ./bin/brain-games
+14.Makefile: прописать команду validate, которая выполнит composer validate
 ________________
-15. composer require wp-cli/php-cli-tools
-16../bin/brain-games
+15.~$ composer require wp-cli/php-cli-tools
+16.~$ ./bin/brain-games
 Welcome to the Brain Games!
 May I have your name? John
 Hello, John!
-17.touch Cli.php :
+17.~$ nano src/Cli.php :
 <?php
 
 use function cli\line;
@@ -33,8 +34,8 @@ use function cli\prompt;
 line('Welcome to the Brain Game!');
 $name = prompt('May I have your name?');
 line("Hello, %s!", $name);
-18. Cli.php: namespace BrainGames\Cli;
-19.bin/brain-games:
+18.$ php-project-45/src nano Cli.php: namespace BrainGames\Cli;
+19.~$ nano bin/brain-games:
 #!/usr/bin/env php
 <?php
 

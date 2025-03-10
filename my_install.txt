@@ -1,6 +1,6 @@
 1.PHP последн. версии
 2.Composer глобально
-3.Склонировать репо php-project-45 (локально можно переименовать)
+3./home/yam $git clone git@github.com:yakovmedvedev/php-project-45.git
 4.Инициализация composer init. имя пакета - hexlet/code.
 5.~$ mkdir bin
 ~$ echo 'Welcome to the Brain Games!' > bin/brain-games.php

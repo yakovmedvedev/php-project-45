@@ -19,7 +19,9 @@ echo "Welcome to the Brain Games!\n";
 
 // Get the user's name
 $name = promptUser("May I have your name? ");
-echo "Hello, $name!\n";
+echo "Hello, $name!\n\n";
+echo "Answer \"yes\" if the number is even, otherwise answer \"no\".
+\n";
 
 $correctAnswers = 0; // Initialize correct answer counter
 

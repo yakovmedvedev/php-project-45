@@ -9,11 +9,13 @@
     ],
     "autoload": {
             "files": [
-                "src/Cli.php"
+                "src/Cli.php",
+                "src/checkForParity.php"
             ]
     },
     "bin": [
-        "bin/brain-games"
+        "bin/brain-games",
+        "bin/brain-even"
     ],
     "require": {
         "wp-cli/php-cli-tools": "^0.12.1"

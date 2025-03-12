@@ -1,0 +1,8 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use function BrainEven\checkForParity\isOdd;
+//use function php\project\45\Cli\welcome as BrainGames\Cli\welcome;
+

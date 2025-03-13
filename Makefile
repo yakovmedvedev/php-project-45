@@ -8,6 +8,9 @@ brain-games:
 brain-even:
 	./bin/brain-even
 
+brain-even2:
+	./bin/even
+
 validate:
 	composer validate
 

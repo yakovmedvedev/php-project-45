@@ -1,0 +1,11 @@
+https://asciinema.org/~Yam
+
+yakovmedvedev@gmail.com
+
+sudo apt install asciinema
+
+asciinema rec demo.cast
+
+asciinema play demo.cast
+
+asciinema upload demo.cast

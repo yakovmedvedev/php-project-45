@@ -6,4 +6,5 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/yakovmedvedev/php-project-45/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/yakovmedvedev/php-project-45/actions)
 
+### Terminal session with [make install] and [make brain-even]
 https://asciinema.org/a/2cvApt0lZjDxYFo6aiBEVazhT

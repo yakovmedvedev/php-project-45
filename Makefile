@@ -19,3 +19,5 @@ update:
 
 lint:
 	composer exec --verbose phpcs -- --standard=PSR12 src bin
+
+.PHONY: greet even-game game3

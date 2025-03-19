@@ -10,12 +10,14 @@
     "autoload": {
             "files": [
                 "src/Cli.php",
-                "src/even-game.php"
+                "src/even-game.php",
+                "src/calc-game.php"
             ]
     },
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "require": {
         "wp-cli/php-cli-tools": "^0.12.1",

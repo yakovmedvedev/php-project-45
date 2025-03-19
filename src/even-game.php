@@ -1,40 +1,41 @@
 <?php
 
 
-namespace BrainGames\EvenGame;
-// use WP_CLI\Utils; // Ensure to include this
+namespace GamesTest\EvenGame;
+
 use function cli\line;
 use function cli\prompt;
 
-function is_even($number) {
+function isEven($number) {
     return $number % 2 === 0;
 }
 
-function even_game() {
+function evenGame() {
     line("Hello, this is the brain-games!");
-    $name = prompt("What's your name?");
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
     line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
 
-    $correct_answers = 0;
+    // $correctAnswers = 0;
 
-    while ($correct_answers < 3) {
-        $random_number = rand(1, 100);
-        line("Question: $random_number");
-        $answer = prompt("");
+    for ($correctAnswers = 0 ; $correctAnswers < 3 ; $correctAnswers++) {
+        $randomNumber = rand(1, 100);
+        line("Question: $randomNumber");
+        $userAnswer = prompt("Your answer");
 
-        $correct_answer = is_even($random_number) ? 'yes' : 'no';
+        $correctAnswer = isEven($randomNumber) ? 'yes' : 'no';
 
-        if ($answer === $correct_answer) {
-            line("Correct!");
-            $correct_answers++;
+        if ($userAnswer === $correctAnswer) {
+            line("Correct!\n");
+            // $correctAnswers++;
         } else {
-            line("$answer is wrong answer ;(. Correct answer was $correct_answer. Let's try again, $name.");
-           //$correct_answers = 0; // Reset count on a wrong answer
-           return;
+            line("'$userAnswer' is wrong answer ;(. Correct answer was '$correctAnswer'. Let's try again, $name!");
+            exit();
+            // return false;
+            // break;
+            // $correct_answers = 0; 
         }
     }
-
-    line("Congratulations, $name!");
+    line("Congratulations, $name!");    
 }
-
-// even_game();
+// evenGame();

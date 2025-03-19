@@ -8,3 +8,6 @@
 
 ### Terminal session with [make install] and [make brain-even]
 https://asciinema.org/a/Ifgc8gCK9N8e0W8egsdBwWOKI
+
+### Terminal session with [make brain-calc]
+https://asciinema.org/a/KFVqiPabkmpNkpXzwBIywwwdF

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace GamesTest\EvenGame;
+namespace BrainGames\EvenGame;
 
 use function cli\line;
 use function cli\prompt;

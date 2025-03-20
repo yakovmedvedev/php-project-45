@@ -1,7 +1,7 @@
 <?php
 
 
-namespace GamesTest\CalcGame;
+namespace BrainGames\CalcGame;
 
 use function cli\line;
 use function cli\prompt;

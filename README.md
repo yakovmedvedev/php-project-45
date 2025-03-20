@@ -7,6 +7,7 @@
 [![Actions Status](https://github.com/yakovmedvedev/php-project-45/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/yakovmedvedev/php-project-45/actions)
 
 ### Terminal session with [make install] and [make brain-even]
+<script src="https://asciinema.org/a/Ifgc8gCK9N8e0W8egsdBwWOKI.js" id="asciicast-Ifgc8gCK9N8e0W8egsdBwWOKI" async="true"></script>
 https://asciinema.org/a/Ifgc8gCK9N8e0W8egsdBwWOKI
 
 ### Terminal session with [make brain-calc]

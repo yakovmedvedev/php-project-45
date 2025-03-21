@@ -9,9 +9,10 @@
     ],
     "autoload": {
             "files": [
-                "src/Cli.php",
-                "src/even-game.php",
-                "src/calc-game.php"
+                "src/engine.php",
+		"src/Cli.php",
+                "src/Games/even-game.php",
+                "src/Games/calc-game.php"
             ]
     },
     "bin": [

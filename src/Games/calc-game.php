@@ -2,42 +2,51 @@
 
 namespace BrainGames\Games\CalcGame;
 
+use function BrainGames\Engine\greetUser;
+use function BrainGames\Engine\checkUserAnswer;
+use function BrainGames\Engine\finishGame;
 use function cli\line;
 use function cli\prompt;
+
 use BrainGames\Engine;
 
-// require_once(__DIR__ . '/../engine.php'); // Require the engine file
+function calcGame()
+{
+    $name = greetUser(); // Call the greetUser function
 
-function mathOper() {
-    $name = Engine\startGame("Welcome to the Brain Games!", "May I have your name?", 'mathOper');
     line("What is the result of the expression?");
-    
-    $operations = ['+', '-', '*'];
 
-    for ($i = 0; $i < 3; $i++) {
-        $number1 = rand(1, 10);
-        $number2 = rand(1, 10);
-        $operation = $operations[array_rand($operations)];
-        
+    for ($rightAnswers = 0 ; $rightAnswers < 3 ; $rightAnswers ++) {
+
+        $operators = ['+', '-', '*'];
+        $operatorsRandomKey = array_rand($operators);
+        $operation = $operators[$operatorsRandomKey];
+        $numberOne = rand(0, 10);
+        $numberTwo = rand(0, 10);
+
         switch ($operation) {
             case '+':
-                $correctAnswer = $number1 + $number2;
+                $rightAnswer = $numberOne + $numberTwo;
                 break;
             case '-':
-                $correctAnswer = $number1 - $number2;
+                $rightAnswer = $numberOne - $numberTwo;
                 break;
             case '*':
-                $correctAnswer = $number1 * $number2;
+                $rightAnswer = $numberOne * $numberTwo;
                 break;
-            default:
-                throw new \Exception("Invalid operation");
         }
 
-        $question = "$number1 $operation $number2";
-        Engine\askQuestion($question, (string) $correctAnswer, $name);
+        line("Qestion: $numberOne $operation $numberTwo");
+        $userAnswer = prompt("Your answer");
+
+        checkUserAnswer((int)$userAnswer, $rightAnswer, $name); // Call the checkUserAnswer function
+
+        // if ((int)$userAnswer === $rightAnswer) {
+        //     line("Quite right, $name!");
+        // } else {
+        //     line("\033[91mAbsolutely wrong, $name!");
+        //     exit("Bye-bye!\n");
+        // }
     }
-
-    Engine\finishGame($name);
+    finishGame($name);
 }
-
-// mathOper();

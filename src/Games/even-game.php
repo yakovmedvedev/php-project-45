@@ -2,29 +2,34 @@
 
 namespace BrainGames\Games\EvenGame;
 
+use function BrainGames\Engine\greetUser;
+use function BrainGames\Engine\checkUserAnswer;
+use function BrainGames\Engine\finishGame;
 use function cli\line;
 use function cli\prompt;
+
 use BrainGames\Engine;
 
-//require_once(__DIR__ . '/../engine.php'); // Require the engine file
-
-function isEven($number) {
+function isEven($number)
+{
     return $number % 2 === 0;
 }
 
-function evenGame() {
-    $name = Engine\startGame("Welcome to the Brain Game!", 'May I have your name?', 'evenGame');
+function evenGame()
+{
+    $name = Engine\greetUser(); // Call the greetUser function
 
     line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
 
-    for ($correctAnswers = 0; $correctAnswers < 3; $correctAnswers++) {
+    for ($rightAnswers = 0; $rightAnswers < 3; $rightAnswers++) {
         $randomNumber = rand(1, 100);
-        $correctAnswer = isEven($randomNumber) ? 'yes' : 'no';
-        Engine\askQuestion($randomNumber, $correctAnswer, $name);
+        line("Question: $randomNumber");
+        $userAnswer = prompt("Your answer");
+
+        $rightAnswer = isEven($randomNumber) ? 'yes' : 'no';
+
+        checkUserAnswer($userAnswer, $rightAnswer, $name); // Call the checkUserAnswer function
     }
-    
-    Engine\finishGame($name);
+    // exit("\033[92mCongratulations, $name!\n");
+    finishGame($name);
 }
-
-// evenGame();
-

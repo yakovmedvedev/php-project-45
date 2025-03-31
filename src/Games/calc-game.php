@@ -12,7 +12,7 @@ use BrainGames\Engine;
 
 function calcGame()
 {
-    $name = greetUser(); // Call the greetUser function
+    $name = greetUser();
 
     line("What is the result of the expression?");
 
@@ -39,7 +39,7 @@ function calcGame()
         line("Qestion: $numberOne $operation $numberTwo");
         $userAnswer = prompt("Your answer");
 
-        checkUserAnswer((int)$userAnswer, $rightAnswer, $name); // Call the checkUserAnswer function
+        checkUserAnswer((int)$userAnswer, $rightAnswer, $name);
 
         // if ((int)$userAnswer === $rightAnswer) {
         //     line("Quite right, $name!");

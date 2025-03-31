@@ -17,7 +17,7 @@ function isEven($number)
 
 function evenGame()
 {
-    $name = Engine\greetUser(); // Call the greetUser function
+    $name = Engine\greetUser();
 
     line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
 
@@ -28,8 +28,7 @@ function evenGame()
 
         $rightAnswer = isEven($randomNumber) ? 'yes' : 'no';
 
-        checkUserAnswer($userAnswer, $rightAnswer, $name); // Call the checkUserAnswer function
+        checkUserAnswer($userAnswer, $rightAnswer, $name);
     }
-    // exit("\033[92mCongratulations, $name!\n");
     finishGame($name);
 }

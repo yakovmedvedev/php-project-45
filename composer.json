@@ -12,7 +12,8 @@
                 "src/Engine.php",
                 "src/Cli.php",
                 "src/Games/even-game.php",
-                "src/Games/calc-game.php"
+                "src/Games/calc-game.php",
+                "src/Games/gcd-game.php"
             ]
     },
     "bin": [

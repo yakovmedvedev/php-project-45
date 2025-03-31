@@ -11,3 +11,6 @@ https://asciinema.org/a/Ifgc8gCK9N8e0W8egsdBwWOKI
 
 ### Terminal session with [make brain-calc]
 https://asciinema.org/a/qIfmCxo5TEGYBsML9j74hN6Tp
+
+### Terminal session with [make brain-gcd]
+https://asciinema.org/a/8bdQwqhOCfMRREEjhgAjNd65E

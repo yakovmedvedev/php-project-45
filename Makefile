@@ -17,6 +17,9 @@ brain-gcd:
 brain-progression:
 	./bin/brain-progression
 
+brain-prime:
+	./bin/brain-prime
+
 validate:
 	composer validate
 
@@ -26,4 +29,4 @@ update:
 lint:
 	composer exec --verbose phpcs -- --standard=PSR12 src bin
 
-.PHONY: brain-games brain-even brain-game brain-gcd brain-progression
+.PHONY: brain-games brain-even brain-calc brain-gcd brain-progression brain-prime

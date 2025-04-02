@@ -17,3 +17,6 @@ https://asciinema.org/a/8bdQwqhOCfMRREEjhgAjNd65E
 
 ### Terminal session with [make brain-progression]
 https://asciinema.org/a/MMchlHhVveUNxRJzTZaoxgt36
+
+### Terminal session with [make brain-prime]
+https://asciinema.org/a/ysGQEYVmPoPFO4dzXOMXs9GUb

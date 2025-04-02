@@ -12,8 +12,18 @@ use BrainGames\Engine;
 
 function isPrime($number)
 {
-    return $number % 2 !== 0 && $number % 3 !== 0 && $number >1 || $number === 2;
-}
+        if ($number < 2) {
+            return false;
+        }
+        
+        for ($i = 2; $i <= sqrt($number); $i++) {
+            if ($number % $i == 0) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
 
 function primeGame()
 {

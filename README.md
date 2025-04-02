@@ -19,4 +19,4 @@ https://asciinema.org/a/8bdQwqhOCfMRREEjhgAjNd65E
 https://asciinema.org/a/MMchlHhVveUNxRJzTZaoxgt36
 
 ### Terminal session with [make brain-prime]
-https://asciinema.org/a/ysGQEYVmPoPFO4dzXOMXs9GUb
+https://asciinema.org/a/zTOR2mmmgFUZSOe0iZluJfN04

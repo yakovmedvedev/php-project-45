@@ -15,7 +15,7 @@ function greetUser() {
 function progression($startNumber, $progStep, $progLength)
 {
     $progression = [];
-    for ($i = 0; $i < $progLength; $i++) {
+    for ($i = 0; $i < $progLength; $i++) {        
         $progression[] = $startNumber + ($i * $progStep);
     } return $progression;
 }

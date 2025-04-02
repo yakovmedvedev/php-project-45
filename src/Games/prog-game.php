@@ -23,11 +23,12 @@ function progGame() {
         $progStep = rand(1, 10);
         $startNumber = rand(1, 100);
         $progression = progression($startNumber, $progStep, $progLength);
+
         $hiddenIndex = rand(0, $progLength -1);
         $rightAnswer = $progression[$hiddenIndex];
         $progression[$hiddenIndex] = '..';
         
-        line(implode(' ', $progression));
+        line("Qestion: " . implode(' ', $progression));
         
         $userAnswer = prompt("Your answer");
         

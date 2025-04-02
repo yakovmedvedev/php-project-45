@@ -16,4 +16,4 @@ https://asciinema.org/a/qIfmCxo5TEGYBsML9j74hN6Tp
 https://asciinema.org/a/8bdQwqhOCfMRREEjhgAjNd65E
 
 ### Terminal session with [make brain-progression]
-https://asciinema.org/a/fSGUbEL7k2zYot12Pc5vnNgas
+https://asciinema.org/a/MMchlHhVveUNxRJzTZaoxgt36

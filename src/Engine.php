@@ -12,6 +12,14 @@ function greetUser() {
     return $name;
 }
 
+function progression($startNumber, $progStep, $progLength)
+{
+    $progression = [];
+    for ($i = 0; $i < $progLength; $i++) {
+        $progression[] = $startNumber + ($i * $progStep);
+    } return $progression;
+}
+
 function checkUserAnswer($userAnswer, $rightAnswer, $name) {
     if ($userAnswer === $rightAnswer) {
         line("Correct!\n");

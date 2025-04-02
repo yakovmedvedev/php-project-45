@@ -14,15 +14,15 @@
                 "src/Games/even-game.php",
                 "src/Games/calc-game.php",
                 "src/Games/gcd-game.php",
-		"src/Games/progression-game.php"
+		        "src/Games/prog-game.php"
             ]
     },
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
         "bin/brain-calc",
-	"bin/brain-gcd",
-	"bin/brain-progression"
+	    "bin/brain-gcd",
+	    "bin/brain-progression"
     ],
     "require": {
         "wp-cli/php-cli-tools": "^0.12.1",

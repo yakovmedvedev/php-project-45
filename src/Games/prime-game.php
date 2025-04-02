@@ -27,7 +27,7 @@ function isPrime($number)
 
 function primeGame()
 {
-    $name = Engine\greetUser();
+    $name = greetUser();
 
     line("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
 

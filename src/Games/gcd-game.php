@@ -12,7 +12,7 @@ use BrainGames\Engine;
 
 function gcdGame()
 {
-    $name = greetUser(); // Call the greetUser function
+    $name = greetUser();
 
     line("Find the greatest common divisor of given numbers.");
     for ($rightAnswers = 0 ; $rightAnswers < 3 ; $rightAnswers ++) {
@@ -35,5 +35,4 @@ function gcdGame()
     }
     finishGame($name);
 }
-//$gsd = gcd();
-//print_r('$gcd = ' . $gsd . "\n");
+

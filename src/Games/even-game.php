@@ -17,7 +17,7 @@ function isEven($number)
 
 function evenGame()
 {
-    $name = Engine\greetUser();
+    $name = greetUser();
 
     line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
 

@@ -1,8 +1,11 @@
 <?php
+
 /*
  CLI-game. Prime number
 */
 namespace BrainGames\Games\PrimeGame;
+
+use BrainGames\Engine;
 
 use function BrainGames\Engine\greetUser;
 use function BrainGames\Engine\checkUserAnswer;
@@ -10,7 +13,6 @@ use function BrainGames\Engine\finishGame;
 use function cli\line;
 use function cli\prompt;
 
-use BrainGames\Engine;
 /*
 checking wether number is prime
 */
@@ -39,9 +41,7 @@ function primeGame()
         $randomNumber = rand(1, 100);
         line("Question: $randomNumber");
         $userAnswer = prompt("Your answer");
-
         $rightAnswer = isPrime($randomNumber) ? 'yes' : 'no';
-
         checkUserAnswer($userAnswer, $rightAnswer, $name);
     }
     finishGame($name);

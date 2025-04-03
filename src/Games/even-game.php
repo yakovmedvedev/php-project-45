@@ -1,8 +1,12 @@
 <?php
+
 /*
  CLI-game. Is number even
 */
+
 namespace BrainGames\Games\EvenGame;
+
+use BrainGames\Engine;
 
 use function BrainGames\Engine\greetUser;
 use function BrainGames\Engine\checkUserAnswer;
@@ -10,7 +14,6 @@ use function BrainGames\Engine\finishGame;
 use function cli\line;
 use function cli\prompt;
 
-use BrainGames\Engine;
 /*
  Check-up the parity
 */

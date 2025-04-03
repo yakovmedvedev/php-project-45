@@ -20,9 +20,6 @@ brain-progression:
 brain-prime:
 	./bin/brain-prime
 
-validate:
-	composer validate
-
 update:
 	composer update
 

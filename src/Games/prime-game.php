@@ -1,8 +1,16 @@
 <?php
 
-/*
- CLI-game. Prime number
-*/
+/** 
+ * CLI-game. Prime number
+ * PHP version 8.3.6
+ * 
+ * @category CLI-games
+ * @package  Games_Of_Mindproject
+ * @author   Yakov Medvedev <yakovmedvedev@gmail.com>
+ * @license  https://github.com/yakovmedvedev/php-project-45 MIT
+ * @link     https://github.com/yakovmedvedev/php-project-45
+ */
+
 namespace BrainGames\Games\PrimeGame;
 
 use BrainGames\Engine;
@@ -13,9 +21,9 @@ use function BrainGames\Engine\finishGame;
 use function cli\line;
 use function cli\prompt;
 
-/*
-checking wether number is prime
-*/
+/**
+ * Checking wether number is prime
+ */
 function isPrime($number)
 {
     if ($number < 2) {
@@ -28,9 +36,9 @@ function isPrime($number)
     }
     return true;
 }
-/*
-game logic
-*/
+/**
+ * Game logic
+ */
 function primeGame()
 {
     $name = greetUser();

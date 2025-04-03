@@ -1,8 +1,15 @@
 <?php
 
-/*
- CLI-game. Is number even
-*/
+/** 
+ * CLI-game. Is number even
+ * PHP version 8.3.6
+ * 
+ * @category CLI-games
+ * @package  Games_Of_Mindproject
+ * @author   Yakov Medvedev <yakovmedvedev@gmail.com>
+ * @license  https://github.com/yakovmedvedev/php-project-45 MIT
+ * @link     https://github.com/yakovmedvedev/php-project-45
+ */
 
 namespace BrainGames\Games\EvenGame;
 
@@ -14,16 +21,16 @@ use function BrainGames\Engine\finishGame;
 use function cli\line;
 use function cli\prompt;
 
-/*
- Check-up the parity
-*/
+/**
+ * Check-up the parity
+ */
 function isEven($number)
 {
     return $number % 2 === 0;
 }
-/*
- Game logic
-*/
+/**
+ * Game logic
+ */
 function evenGame()
 {
     $name = greetUser();

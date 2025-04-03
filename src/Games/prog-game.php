@@ -1,8 +1,16 @@
 <?php
 
-/*
- CLI-game. Progression number
-*/
+/** 
+ * CLI-game. Progression number
+ * PHP version 8.3.6
+ * 
+ * @category CLI-games
+ * @package  Games_Of_Mindproject
+ * @author   Yakov Medvedev <yakovmedvedev@gmail.com>
+ * @license  https://github.com/yakovmedvedev/php-project-45 MIT
+ * @link     https://github.com/yakovmedvedev/php-project-45
+ */
+
 namespace BrainGames\Games\ProgGame;
 
 use BrainGames\Engine;
@@ -14,9 +22,9 @@ use function BrainGames\Engine\finishGame;
 use function cli\line;
 use function cli\prompt;
 
-/*
-Game logic
-*/
+/**
+ * Game logic
+ */
 function progGame()
 {
     $name = greetUser();

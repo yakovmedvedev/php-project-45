@@ -1,5 +1,7 @@
 <?php
-
+/*
+ Greatest Common Divisor
+*/
 namespace BrainGames\Games\GcdGame;
 
 use function BrainGames\Engine\greetUser;
@@ -9,7 +11,9 @@ use function cli\line;
 use function cli\prompt;
 
 use BrainGames\Engine;
-
+/*
+ Game logic
+*/
 function gcdGame()
 {
     $name = greetUser();

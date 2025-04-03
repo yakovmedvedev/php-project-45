@@ -1,5 +1,7 @@
 <?php
-
+/*
+ CLI-game. Prime number
+*/
 namespace BrainGames\Games\PrimeGame;
 
 use function BrainGames\Engine\greetUser;
@@ -9,22 +11,24 @@ use function cli\line;
 use function cli\prompt;
 
 use BrainGames\Engine;
-
+/*
+checking wether number is prime
+*/
 function isPrime($number)
 {
-        if ($number < 2) {
+    if ($number < 2) {
+        return false;
+    }
+    for ($i = 2; $i <= sqrt($number); $i++) {
+        if ($number % $i == 0) {
             return false;
         }
-        
-        for ($i = 2; $i <= sqrt($number); $i++) {
-            if ($number % $i == 0) {
-                return false;
-            }
-        }
-        
-        return true;
     }
-
+    return true;
+}
+/*
+game logic
+*/
 function primeGame()
 {
     $name = greetUser();

@@ -1,17 +1,24 @@
 <?php
-
+/*
+ CLI-games common logic
+*/
 namespace BrainGames\Engine;
 
 use function cli\line;
 use function cli\prompt;
-
-function greetUser() {
+/*
+Greeting a user
+*/
+function greetUser()
+{
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
     line("Hello, $name!");
     return $name;
 }
-
+/*
+ Progression for prog-game
+*/
 function progression($startNumber, $progStep, $progLength)
 {
     $progression = [];
@@ -19,8 +26,11 @@ function progression($startNumber, $progStep, $progLength)
         $progression[] = $startNumber + ($i * $progStep);
     } return $progression;
 }
-
-function checkUserAnswer($userAnswer, $rightAnswer, $name) {
+/*
+ Checking answers of a user
+*/
+function checkUserAnswer($userAnswer, $rightAnswer, $name)
+{
     if ($userAnswer === $rightAnswer) {
         line("Correct!\n");
     } else {
@@ -28,8 +38,11 @@ function checkUserAnswer($userAnswer, $rightAnswer, $name) {
         exit("Bye-bye!\n");
     }
 }
-
-function finishGame($name) {
+/*
+ Successing finishing
+*/
+function finishGame($name)
+{
     line("\033[92mCongratulations, %s!", $name);
 }
 

@@ -1,5 +1,7 @@
 <?php
-
+/*
+ CLI-game. Progression number
+*/
 namespace BrainGames\Games\ProgGame;
 
 use function BrainGames\Engine\greetUser;
@@ -11,9 +13,11 @@ use function cli\prompt;
 
 use BrainGames\Engine;
 
-
-function progGame() {
-
+/*
+Game logic
+*/
+function progGame()
+{
     $name = greetUser();
 
     line("What number is missing in the progression?");

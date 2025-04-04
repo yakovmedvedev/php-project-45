@@ -48,7 +48,7 @@ function calcGame()
             break;
         }
 
-        line("Qestion: $numberOne $operation $numberTwo");
+        line("Question: $numberOne $operation $numberTwo");
         $userAnswer = prompt("Your answer");
 
         checkUserAnswer((int)$userAnswer, $rightAnswer, $name);

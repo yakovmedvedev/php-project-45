@@ -41,7 +41,7 @@ function progGame()
         $rightAnswer = $progression[$hiddenIndex];
         $progression[$hiddenIndex] = '..';
 
-        line("Qestion: " . implode(' ', $progression));
+        line("Question: " . implode(' ', $progression));
 
         $userAnswer = prompt("Your answer");
 

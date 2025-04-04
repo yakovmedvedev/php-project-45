@@ -32,7 +32,7 @@ function gcdGame()
     for ($rightAnswers = 0; $rightAnswers < 3; $rightAnswers++) {
         $numberOne = rand(0, 100);
         $numberTwo = rand(0, 100);
-        line("Qestion: $numberOne $numberTwo");
+        line("Question: $numberOne $numberTwo");
         while ($numberTwo !== 0) {
             $temp = $numberTwo;
             $numberTwo = $numberOne % $numberTwo;

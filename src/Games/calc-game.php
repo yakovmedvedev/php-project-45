@@ -1,9 +1,9 @@
 <?php
 
-/** 
+/**
  * CLI-game. Math operations
  * PHP version 8.3.6
- * 
+ *
  * @category CLI-games
  * @package  Games_Of_Mindproject
  * @author   Yakov Medvedev <yakovmedvedev@gmail.com>
@@ -37,15 +37,15 @@ function calcGame()
         $numberOne = rand(0, 10);
         $numberTwo = rand(0, 10);
         switch ($operation) {
-        case '+':
+            case '+':
                 $rightAnswer = $numberOne + $numberTwo;
-            break;
-        case '-':
+                break;
+            case '-':
                 $rightAnswer = $numberOne - $numberTwo;
-            break;
-        case '*':
+                break;
+            case '*':
                 $rightAnswer = $numberOne * $numberTwo;
-            break;
+                break;
         }
 
         line("Question: $numberOne $operation $numberTwo");

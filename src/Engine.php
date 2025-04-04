@@ -1,9 +1,9 @@
 <?php
 
-/** 
+/**
  * CLI-games common logic
  * PHP version 8.3.6
- * 
+ *
  * @category CLI-games
  * @package  Games_Of_Mindproject
  * @author   Yakov Medvedev <yakovmedvedev@gmail.com>
@@ -16,7 +16,7 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-/** 
+/**
  * Greeting a user
  */
 function greetUser()

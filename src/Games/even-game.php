@@ -1,9 +1,9 @@
 <?php
 
-/** 
+/**
  * CLI-game. Is number even
  * PHP version 8.3.6
- * 
+ *
  * @category CLI-games
  * @package  Games_Of_Mindproject
  * @author   Yakov Medvedev <yakovmedvedev@gmail.com>

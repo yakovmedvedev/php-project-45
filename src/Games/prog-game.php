@@ -45,7 +45,7 @@ function progGame()
 
         $userAnswer = prompt("Your answer");
 
-        checkUserAnswer((int)$userAnswer, $rightAnswer, $name);
+        checkUserAnswer($userAnswer, $rightAnswer, $name);
     }
     finishGame($name);
 }

@@ -42,7 +42,7 @@ function gcdGame()
         // return $rightAnswer;
         $userAnswer = prompt("Your answer");
         $userAnswer = (int)$userAnswer;
-        checkUserAnswer($userAnswer, $rightAnswer, $name);
+        checkUserAnswer((string) $userAnswer, (string) $rightAnswer, $name);
     }
     finishGame($name);
 }

@@ -24,7 +24,7 @@ use function cli\prompt;
 /**
  * Checking wether number is prime
  */
-function isPrime($number)
+function isPrime(int $number)
 {
     if ($number < 2) {
         return false;

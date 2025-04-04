@@ -24,7 +24,7 @@ use function cli\prompt;
 /**
  * Check-up the parity
  */
-function isEven($number)
+function isEven(int $number)
 {
     return $number % 2 === 0;
 }

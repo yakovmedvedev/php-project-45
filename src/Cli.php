@@ -19,11 +19,11 @@ use function cli\prompt;
 /**
  * Game logic
  */
-function greet_user()
+function greetUser()
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
     line("Hello, $name!");
 }
 
-// greet_user();
+// greetUser();

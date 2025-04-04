@@ -29,7 +29,7 @@ function greetUser()
 /**
  * Progression logic for prog-game
  */
-function progression($startNumber, $progStep, $progLength)
+function progression(int $startNumber, int $progStep, int $progLength)
 {
     $progression = [];
     for ($i = 0; $i < $progLength; $i++) {
@@ -39,7 +39,7 @@ function progression($startNumber, $progStep, $progLength)
 /**
  * Checking answers of a user
  */
-function checkUserAnswer($userAnswer, $rightAnswer, $name)
+function checkUserAnswer(string $userAnswer, string $rightAnswer, string $name)
 {
     if ($userAnswer === $rightAnswer) {
         line("Correct!\n");
@@ -51,7 +51,7 @@ function checkUserAnswer($userAnswer, $rightAnswer, $name)
 /**
  * Succesfull finishing
  */
-function finishGame($name)
+function finishGame(string $name)
 {
     line("\033[92mCongratulations, %s!", $name);
 }

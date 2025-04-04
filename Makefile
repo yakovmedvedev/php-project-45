@@ -28,6 +28,7 @@ update:
 
 lint:
 	composer exec --verbose phpcs -- --standard=PSR12 src bin
+	vendor/bin/phpstan analyse
 
 lint-fix:
 	composer exec -v phpcbf -- --standard=PSR12 --colors src bin

@@ -51,7 +51,7 @@ function calcGame()
         line("Question: $numberOne $operation $numberTwo");
         $userAnswer = prompt("Your answer");
 
-        checkUserAnswer((int)$userAnswer, $rightAnswer, $name);
+        checkUserAnswer($userAnswer, (string)$rightAnswer, $name);
 
         // if ((int)$userAnswer === $rightAnswer) {
         //     line("Quite right, $name!");

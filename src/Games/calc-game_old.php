@@ -16,49 +16,49 @@ namespace BrainGames\Games\CalcGame;
 use BrainGames\Engine;
 
 use function BrainGames\Engine\greetUser;
-use function BrainGames\Engine\calculate;
 use function BrainGames\Engine\checkUserAnswer;
 use function BrainGames\Engine\finishGame;
 use function cli\line;
 use function cli\prompt;
-//Number of questions
-use const BrainGames\Engine\QUESTIONS_NUM;
-use const BrainGames\Engine\QUESTION;
-use const BrainGames\Engine\ANSWER;
 
-//Game logic
+/**
+ * Game logic
+ */
 function calcGame()
 {
     $name = greetUser();
 
     line("What is the result of the expression?");
 
-    for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
+    for ($rightAnswers = 0; $rightAnswers < 3; $rightAnswers++) {
         $operators = ['+', '-', '*'];
         $operatorsRandomKey = array_rand($operators);
         $operation = $operators[$operatorsRandomKey];
         $numberOne = rand(0, 10);
         $numberTwo = rand(0, 10);
-        // switch ($operation) {
-        //     case '+':
-        //         $rightAnswer = $numberOne + $numberTwo;
-        //         break;
-        //     case '-':
-        //         $rightAnswer = $numberOne - $numberTwo;
-        //         break;
-        //     case '*':
-        //         $rightAnswer = $numberOne * $numberTwo;
-        //         break;
-        // }
+        switch ($operation) {
+            case '+':
+                $rightAnswer = $numberOne + $numberTwo;
+                break;
+            case '-':
+                $rightAnswer = $numberOne - $numberTwo;
+                break;
+            case '*':
+                $rightAnswer = $numberOne * $numberTwo;
+                break;
+        }
 
-        // Use the calculate function from Engine.php
-        $rightAnswer = calculate($numberOne, $numberTwo, $operation);
-
-        // line("Question: $numberOne $operation $numberTwo");
-        line(QUESTION . "$numberOne $operation $numberTwo");
-        $userAnswer = prompt(ANSWER);
+        line("Question: $numberOne $operation $numberTwo");
+        $userAnswer = prompt("Your answer");
 
         checkUserAnswer($userAnswer, (string)$rightAnswer, $name);
+
+        // if ((int)$userAnswer === $rightAnswer) {
+        //     line("Quite right, $name!");
+        // } else {
+        //     line("\033[91mAbsolutely wrong, $name!");
+        //     exit("Bye-bye!\n");
+        // }
     }
     finishGame($name);
 }

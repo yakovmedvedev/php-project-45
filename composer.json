@@ -12,11 +12,11 @@
             "files": [
                 "src/Engine.php",
                 "src/Cli.php",
-                "src/Games/even-game.php",
-                "src/Games/calc-game.php",
-                "src/Games/gcd-game.php",
-		        "src/Games/prog-game.php",
-                "src/Games/prime-game.php"
+                "src/Games/EvenGame.php",
+                "src/Games/CalcGame.php",
+                "src/Games/GcdGame.php",
+		        "src/Games/ProgGame.php",
+                "src/Games/PrimeGame.php"
             ]
     },
     "bin": [

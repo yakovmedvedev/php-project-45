@@ -11,15 +11,19 @@
  * @link     https://github.com/yakovmedvedev/php-project-45
  */
 
- namespace BrainGames\Cli;
+namespace BrainGames\Cli;
 
- use BrainGames\Engine;
+use function cli\line;
+use function cli\prompt;
 
- use function BrainGames\Engine\greetUser;
-
-//Game logic
-function runBrainGame()
+/**
+ * Game logic
+ */
+function greetUser()
 {
-   
+    line("Welcome to the Brain Games!");
+    $name = prompt("May I have your name?");
+    line("Hello, $name!");
 }
-Engine\greetUser();
+
+// greetUser();

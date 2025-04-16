@@ -15,23 +15,26 @@ namespace BrainGames\Games\ProgGame;
 
 use BrainGames\Engine;
 
-use function BrainGames\Engine\greetUser;
-use function BrainGames\Engine\progression;
-use function BrainGames\Engine\checkUserAnswer;
-use function BrainGames\Engine\finishGame;
-use function cli\line;
-use function cli\prompt;
+use const BrainGames\Engine\QUESTIONS_NUM;
 
-/**
- * Game logic
- */
-function progGame()
+use function BrainGames\Engine\runEngine;
+
+//Progression logic for the game
+function progression(int $startNumber, int $progStep, int $progLength)
 {
-    $name = greetUser();
+    $progression = [];
+    for ($i = 0; $i < $progLength; $i++) {
+        $progression[] = $startNumber + ($i * $progStep);
+    } return $progression;
+}
+//Game logic
+function runProgGame()
+{
+    $description = "What number is missing in the progression?";
 
-    line("What number is missing in the progression?");
+    $data = [];
 
-    for ($rightAnswers = 0; $rightAnswers < 3; $rightAnswers++) {
+    for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
         $progLength = rand(5, 10);
         $progStep = rand(1, 10);
         $startNumber = rand(1, 100);
@@ -41,12 +44,9 @@ function progGame()
         $rightAnswer = $progression[$hiddenIndex];
         $progression[$hiddenIndex] = '..';
 
-        line("Question: " . implode(' ', $progression));
-
-        $userAnswer = prompt("Your answer");
-
-        checkUserAnswer($userAnswer, $rightAnswer, $name);
+        $question = implode(' ', $progression);
+        
+        $data += [$question => $rightAnswer];
     }
-    finishGame($name);
+    runEngine($description, $data);
 }
-// progGame();

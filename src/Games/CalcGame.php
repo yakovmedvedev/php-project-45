@@ -15,27 +15,24 @@ namespace BrainGames\Games\CalcGame;
 
 use BrainGames\Engine;
 
-use function BrainGames\Engine\greetUser;
-use function BrainGames\Engine\checkUserAnswer;
-use function BrainGames\Engine\finishGame;
-use function cli\line;
-use function cli\prompt;
+use function BrainGames\Engine\runEngine;
 
-/**
- * Game logic
- */
-function calcGame()
+use const BrainGames\Engine\QUESTIONS_NUM;
+
+//Game logic
+function runCalcGame()
 {
-    $name = greetUser();
+   $description = "What is the result of the expression?";
 
-    line("What is the result of the expression?");
+   $data = [];
 
-    for ($rightAnswers = 0; $rightAnswers < 3; $rightAnswers++) {
+    for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
         $operators = ['+', '-', '*'];
         $operatorsRandomKey = array_rand($operators);
         $operation = $operators[$operatorsRandomKey];
         $numberOne = rand(0, 10);
         $numberTwo = rand(0, 10);
+
         switch ($operation) {
             case '+':
                 $rightAnswer = $numberOne + $numberTwo;
@@ -48,17 +45,10 @@ function calcGame()
                 break;
         }
 
-        line("Question: $numberOne $operation $numberTwo");
-        $userAnswer = prompt("Your answer");
+        $question = $numberOne . $operation . $numberTwo;
 
-        checkUserAnswer($userAnswer, (string)$rightAnswer, $name);
+        $data += [$question => $rightAnswer];
 
-        // if ((int)$userAnswer === $rightAnswer) {
-        //     line("Quite right, $name!");
-        // } else {
-        //     line("\033[91mAbsolutely wrong, $name!");
-        //     exit("Bye-bye!\n");
-        // }
     }
-    finishGame($name);
+    runEngine($description, $data);
 }

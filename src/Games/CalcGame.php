@@ -19,6 +19,9 @@ use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\QUESTIONS_NUM;
 
+const MIN_VALUE = 0;
+const MAX_VALUE = 10;
+
 //Game logic
 function runCalcGame()
 {
@@ -29,8 +32,8 @@ function runCalcGame()
         $operators = ['+', '-', '*'];
         $operatorsRandomKey = array_rand($operators);
         $operation = $operators[$operatorsRandomKey];
-        $numberOne = rand(0, 10);
-        $numberTwo = rand(0, 10);
+        $numberOne = rand(MIN_VALUE, MAX_VALUE);
+        $numberTwo = rand(MIN_VALUE, MAX_VALUE);
 
         switch ($operation) {
             case '+':
@@ -42,6 +45,8 @@ function runCalcGame()
             case '*':
                 $rightAnswer = $numberOne * $numberTwo;
                 break;
+            default:
+            break;
         }
 
         $question = $numberOne . $operation . $numberTwo;

@@ -22,20 +22,20 @@
 <p>Игра считается пройденой, если даны верные ответы подряд на три вопроса.
 В случае неправильного ответа игра завершается.</p>
 
-Взаимодействие через командную строку консоли Linux.
-Вызов происходит через команду make:
--make brain-games;
--make brain-even;
--make brain-calc;
--make brain-gcd;
--make brain-progression;
--make brain-prime
+<p>Взаимодействие через командную строку консоли Linux.<br />
+Вызов происходит через команду make:</p>
+<ul><li>-make brain-games;</li>
+<li>-make brain-even;</li>
+<li>-make brain-calc;</li>
+<li>-make brain-gcd;</li>
+<li>-make brain-progression;</li>
+<li>-make brain-prime</li></ul>
 
 ### Требования:
-Наличие на компьютере ОС Linux и PHP не ниже 7 версии.
+<p>Наличие на компьютере ОС Linux и PHP не ниже 7 версии.</p>
 
 ### Установка:
-Для установки используется команда make install, запускающая composer install.
+<p>Для установки используется команда make install, запускающая composer install.</p>
 
 ### Terminal session with [make install] and [make brain-even]
 https://asciinema.org/a/Ifgc8gCK9N8e0W8egsdBwWOKI

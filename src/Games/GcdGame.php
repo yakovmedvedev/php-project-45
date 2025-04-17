@@ -15,19 +15,17 @@ namespace BrainGames\Games\GcdGame;
 
 use BrainGames\Engine;
 
-use const BrainGames\Engine\QUESTIONS_NUM;
-
 use function BrainGames\Engine\runEngine;
+
+use const BrainGames\Engine\QUESTIONS_NUM;
 
 //Game logic
 function runGcdGame()
 {
     $description = "Find the greatest common divisor of given numbers.";
-    
     $data = [];
 
     for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
-
         $numberOne = rand(0, 100);
         $numberTwo = rand(0, 100);
         $question = "$numberOne $numberTwo";

@@ -22,9 +22,8 @@ use const BrainGames\Engine\QUESTIONS_NUM;
 //Game logic
 function runCalcGame()
 {
-   $description = "What is the result of the expression?";
-
-   $data = [];
+    $description = "What is the result of the expression?";
+    $data = [];
 
     for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
         $operators = ['+', '-', '*'];
@@ -48,7 +47,6 @@ function runCalcGame()
         $question = $numberOne . $operation . $numberTwo;
 
         $data += [$question => $rightAnswer];
-
     }
     runEngine($description, $data);
 }

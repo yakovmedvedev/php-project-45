@@ -15,9 +15,9 @@ namespace BrainGames\Games\PrimeGame;
 
 use BrainGames\Engine;
 
-use const BrainGames\Engine\QUESTIONS_NUM;
-
 use function BrainGames\Engine\runEngine;
+
+use const BrainGames\Engine\QUESTIONS_NUM;
 
 //Checking wether a number is prime
 function isPrime(int $number)
@@ -36,7 +36,6 @@ function isPrime(int $number)
 function runPrimeGame()
 {
     $description = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
-
     $data = [];
 
     for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
@@ -45,7 +44,6 @@ function runPrimeGame()
         $rightAnswer = isPrime($randomNumber) ? 'yes' : 'no';
 
         $data += [$question => $rightAnswer];
-
     }
     runEngine($description, $data);
 }

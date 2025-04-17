@@ -15,9 +15,9 @@ namespace BrainGames\Games\ProgGame;
 
 use BrainGames\Engine;
 
-use const BrainGames\Engine\QUESTIONS_NUM;
-
 use function BrainGames\Engine\runEngine;
+
+use const BrainGames\Engine\QUESTIONS_NUM;
 
 //Progression logic for the game
 function progression(int $startNumber, int $progStep, int $progLength)
@@ -31,7 +31,6 @@ function progression(int $startNumber, int $progStep, int $progLength)
 function runProgGame()
 {
     $description = "What number is missing in the progression?";
-
     $data = [];
 
     for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {

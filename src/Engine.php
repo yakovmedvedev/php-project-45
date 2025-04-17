@@ -50,7 +50,7 @@ function checkUserAnswer(string $userAnswer, string $rightAnswer, string $name)
         line("\033[91m'$userAnswer' is wrong answer ;(. Correct answer was '$rightAnswer'. Let's try again, $name!\n");
         exit("Bye-bye!\n");
     }
-} 
+}
 //Succesfull finishing
 function finishGame(string $name)
 {

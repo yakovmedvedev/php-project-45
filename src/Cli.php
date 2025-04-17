@@ -20,6 +20,5 @@
 //Game logic
 function runBrainGame()
 {
-    $name = '';
     greetUser();
 }

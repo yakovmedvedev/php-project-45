@@ -1,3 +1,6 @@
+### SonarQube
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=yakovmedvedev_php-project-45&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=yakovmedvedev_php-project-45)
+
 ### Code Climate
 [![Maintainability](https://api.codeclimate.com/v1/badges/a0a886519f1e2ced32f6/maintainability)](https://codeclimate.com/github/yakovmedvedev/php-project-45/maintainability)
 

@@ -21,5 +21,5 @@
 function runBrainGame()
 {
     $name = '';
-    greetUser($name);
+    greetUser();
 }

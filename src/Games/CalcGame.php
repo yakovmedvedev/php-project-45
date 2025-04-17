@@ -19,9 +19,6 @@ use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\QUESTIONS_NUM;
 
-const MIN_VALUE = 0;
-const MAX_VALUE = 10;
-
 //Game logic
 function runCalcGame()
 {

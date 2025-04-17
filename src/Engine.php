@@ -17,10 +17,6 @@ use function cli\line;
 use function cli\prompt;
 //Number of questions
 const QUESTIONS_NUM = 3;
-//Question title
-const QUESTION = 'Question from const:';
-//Invitation to answer
-const ANSWER = 'Your answer from const';
 
 //Greeting a user
 function greetUser()
@@ -30,43 +26,34 @@ function greetUser()
     line("Hello, $name!");
     return $name;
 }
-//logic of math operations for calc-game
-function calculate(int $numberOne, int $numberTwo, string $operation): int
+//Main function running the game
+function runEngine(string $description, array $data)
 {
-    switch ($operation) {
-        case '+':
-            return $numberOne + $numberTwo;
-            break;
-        case '-':
-            return $numberOne - $numberTwo;
-            break;
-        case '*':
-            return $numberOne * $numberTwo;
-            break;
-        // default:
-        //     throw new \InvalidArgumentException("Invalid operation '$operation'");
+    $name = greetUser();
+    line($description);
+
+    foreach ($data as $question => $rightAnswer) {
+        line("Question: $question");
+
+        $userAnswer = prompt("Your answer");
+
+        checkUserAnswer($userAnswer, $rightAnswer, $name);
     }
-}
-//Progression logic for prog-game
-function progression(int $startNumber, int $progStep, int $progLength)
-{
-    $progression = [];
-    for ($i = 0; $i < $progLength; $i++) {
-        $progression[] = $startNumber + ($i * $progStep);
-    } return $progression;
+    finishGame($name);
 }
 //Checking answers of a user
 function checkUserAnswer(string $userAnswer, string $rightAnswer, string $name)
 {
     if ($userAnswer === $rightAnswer) {
-        line("Correct!\n");
+        return line("Correct!\n");
     } else {
         line("\033[91m'$userAnswer' is wrong answer ;(. Correct answer was '$rightAnswer'. Let's try again, $name!\n");
         exit("Bye-bye!\n");
     }
-}
+} 
 //Succesfull finishing
 function finishGame(string $name)
 {
     line("\033[92mCongratulations, %s!", $name);
+    exit("Bye-bye!\n");
 }

@@ -15,15 +15,11 @@ namespace BrainGames\Games\PrimeGame;
 
 use BrainGames\Engine;
 
-use function BrainGames\Engine\greetUser;
-use function BrainGames\Engine\checkUserAnswer;
-use function BrainGames\Engine\finishGame;
-use function cli\line;
-use function cli\prompt;
+use const BrainGames\Engine\QUESTIONS_NUM;
 
-/**
- * Checking wether number is prime
- */
+use function BrainGames\Engine\runEngine;
+
+//Checking wether a number is prime
 function isPrime(int $number)
 {
     if ($number < 2) {
@@ -36,21 +32,20 @@ function isPrime(int $number)
     }
     return true;
 }
-/**
- * Game logic
- */
-function primeGame()
+//Game logic
+function runPrimeGame()
 {
-    $name = greetUser();
+    $description = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
 
-    line("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
+    $data = [];
 
-    for ($rightAnswers = 0; $rightAnswers < 3; $rightAnswers++) {
+    for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
         $randomNumber = rand(1, 100);
-        line("Question: $randomNumber");
-        $userAnswer = prompt("Your answer");
+        $question = $randomNumber;
         $rightAnswer = isPrime($randomNumber) ? 'yes' : 'no';
-        checkUserAnswer($userAnswer, $rightAnswer, $name);
+
+        $data += [$question => $rightAnswer];
+
     }
-    finishGame($name);
+    runEngine($description, $data);
 }

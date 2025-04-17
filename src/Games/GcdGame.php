@@ -15,34 +15,32 @@ namespace BrainGames\Games\GcdGame;
 
 use BrainGames\Engine;
 
-use function BrainGames\Engine\greetUser;
-use function BrainGames\Engine\checkUserAnswer;
-use function BrainGames\Engine\finishGame;
-use function cli\line;
-use function cli\prompt;
+use const BrainGames\Engine\QUESTIONS_NUM;
 
-/**
- * Game logic
- */
-function gcdGame()
+use function BrainGames\Engine\runEngine;
+
+//Game logic
+function runGcdGame()
 {
-    $name = greetUser();
+    $description = "Find the greatest common divisor of given numbers.";
+    
+    $data = [];
 
-    line("Find the greatest common divisor of given numbers.");
-    for ($rightAnswers = 0; $rightAnswers < 3; $rightAnswers++) {
+    for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
+
         $numberOne = rand(0, 100);
         $numberTwo = rand(0, 100);
-        line("Question: $numberOne $numberTwo");
+        $question = "$numberOne $numberTwo";
+     
         while ($numberTwo !== 0) {
             $temp = $numberTwo;
             $numberTwo = $numberOne % $numberTwo;
             $numberOne = $temp;
         }
+
         $rightAnswer = $numberOne;
-        // return $rightAnswer;
-        $userAnswer = prompt("Your answer");
-        $userAnswer = (int)$userAnswer;
-        checkUserAnswer((string) $userAnswer, (string) $rightAnswer, $name);
+
+        $data += [$question => $rightAnswer];
     }
-    finishGame($name);
+    runEngine($description, $data);
 }

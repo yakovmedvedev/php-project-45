@@ -32,8 +32,8 @@ function runCalcGame()
         $operators = ['+', '-', '*'];
         $operatorsRandomKey = array_rand($operators);
         $operation = $operators[$operatorsRandomKey];
-        $numberOne = rand(MIN_VALUE, MAX_VALUE);
-        $numberTwo = rand(MIN_VALUE, MAX_VALUE);
+        $numberOne = rand(0, 10);
+        $numberTwo = rand(0, 10);
 
         switch ($operation) {
             case '+':

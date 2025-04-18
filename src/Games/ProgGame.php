@@ -18,15 +18,6 @@ use BrainGames\Engine;
 use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\QUESTIONS_NUM;
-use const BrainGames\Engine\MIN_VALUE;
-use const BrainGames\Engine\MAX_VALUE;
-
-$length = rand(5,10);
-define("LEN_VAL", $length);
-$step = rand(1,10);
-define("STEP_VAL", $length);
-$start = rand(1,100);
-define("START_VAL", $length);
 
 //Progression logic for the game
 function progression(int $startNumber, int $progStep, int $progLength)

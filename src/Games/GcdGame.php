@@ -29,7 +29,6 @@ function runGcdGame()
         $numberOne = rand(0, 100);
         $numberTwo = rand(0, 100);
         $question = "$numberOne $numberTwo";
-     
         while ($numberTwo !== 0) {
             $temp = $numberTwo;
             $numberTwo = $numberOne % $numberTwo;
@@ -37,7 +36,6 @@ function runGcdGame()
         }
 
         $rightAnswer = $numberOne;
-
         $data += [$question => $rightAnswer];
     }
     runEngine($description, $data);

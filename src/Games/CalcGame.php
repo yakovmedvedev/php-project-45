@@ -43,7 +43,7 @@ function runCalcGame()
                 $rightAnswer = $numberOne * $numberTwo;
                 break;
             default:
-            break;
+                break;
         }
 
         $question = $numberOne . $operation . $numberTwo;

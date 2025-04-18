@@ -12,9 +12,11 @@
  */
 
 namespace BrainGames\Engine;
+
 //CLI-dependensy functions
 use function cli\line;
 use function cli\prompt;
+
 //Number of questions
 const QUESTIONS_NUM = 3;
 

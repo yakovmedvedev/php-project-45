@@ -44,7 +44,6 @@ function runProgGame()
         $progression[$hiddenIndex] = '..';
 
         $question = implode(' ', $progression);
-        
         $data += [$question => $rightAnswer];
     }
     runEngine($description, $data);

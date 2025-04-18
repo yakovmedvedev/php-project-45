@@ -47,7 +47,6 @@ function runCalcGame()
         }
 
         $question = "{$numberOne} {$operation} {$numberTwo}";
-        // $question = $numberOne . $operation . $numberTwo;
         $data += [$question => $rightAnswer];
     }
     runEngine($description, $data);

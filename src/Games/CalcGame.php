@@ -20,7 +20,7 @@ use function BrainGames\Engine\runEngine;
 use const BrainGames\Engine\QUESTIONS_NUM;
 
 //Game logic
-function runCalcGame()
+function runCalcGame(): void
 {
     $description = "What is the result of the expression?";
     $data = [];
@@ -31,6 +31,7 @@ function runCalcGame()
         $operation = $operators[$operatorsRandomKey];
         $numberOne = rand(1, 10);
         $numberTwo = rand(1, 10);
+        $rightAnswer = '';
 
         switch ($operation) {
             case '+':

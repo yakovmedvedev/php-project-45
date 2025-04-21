@@ -1,15 +1,6 @@
 <?php
 
-/**
- * CLI-game. Progression number
- * PHP version 8.3.6
- *
- * @category CLI-games
- * @package  Games_Of_Mindproject
- * @author   Yakov Medvedev <yakovmedvedev@gmail.com>
- * @license  https://github.com/yakovmedvedev/php-project-45 MIT
- * @link     https://github.com/yakovmedvedev/php-project-45
- */
+//CLI-game. Progression number
 
 namespace BrainGames\Games\ProgGame;
 
@@ -19,16 +10,15 @@ use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\QUESTIONS_NUM;
 
-//Progression logic for the game
-function progression(int $startNumber, int $progStep, int $progLength)
+function progression(int $startNumber, int $progStep, int $progLength): array
 {
     $progression = [];
     for ($i = 0; $i < $progLength; $i++) {
         $progression[] = $startNumber + ($i * $progStep);
     } return $progression;
 }
-//Game logic
-function runProgGame()
+
+function runProgGame(): void
 {
     $description = "What number is missing in the progression?";
     $data = [];

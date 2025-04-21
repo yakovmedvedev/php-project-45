@@ -1,8 +1,6 @@
 <?php
 
 
-//CLI-game. Prime number
-
 namespace BrainGames\Games\PrimeGame;
 
 use BrainGames\Engine;

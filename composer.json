@@ -32,6 +32,7 @@
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.11",
-        "hexlet/phpstan-fp": "^2.0"
+        "hexlet/phpstan-fp": "^2.0",
+        "phpstan/phpstan": "^1.12"
     }
 }

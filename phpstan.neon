@@ -1,17 +1,24 @@
+includes:
+  - vendor/hexlet/phpstan-fp/extension.neon
+
 parameters:
   level: 8
   paths:
     - src
-
-  #checkMissingIterableValueType: false
+    - bin
 
   excludePaths:
     - vendor
 
   reportUnmatchedIgnoredErrors: false
 
+  phpstanFunctionalProgramming:
+    disallowLoops: false
+    disallowThrow: false
+    disallowUnusedExpression: false
+    disallowVariablesMutation: false
+    disallowMutatingFunctions: false
+
   ignoreErrors:
-   # TODO: remove this when add in courses theory of returning types
-   - '#has no return type specified#'
-   - '#should return .* but returns#'
-   - '#Anonymous function should have native return type#'
+    - '#Anonymous function should have native return type#'
+    - identifier: missingType.iterableValue

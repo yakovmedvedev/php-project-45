@@ -26,14 +26,14 @@ function isPrime(int $number)
         return false;
     }
     for ($i = 2; $i <= sqrt($number); $i++) {
-        if ($number % $i == 0) {
+        if ($number % $i === 0) {
             return false;
         }
     }
     return true;
 }
 //Game logic
-function runPrimeGame()
+function runPrimeGame(): void
 {
     $description = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
     $data = [];

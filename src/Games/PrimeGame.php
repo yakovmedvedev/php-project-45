@@ -1,5 +1,6 @@
 <?php
 
+//CLI-game. Is a number prime?
 
 namespace BrainGames\Games\PrimeGame;
 

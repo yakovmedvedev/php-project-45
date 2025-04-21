@@ -1,15 +1,6 @@
 <?php
 
-/**
- * CLI-game. Math operations
- * PHP version 8.3.6
- *
- * @category CLI-games
- * @package  Games_Of_Mindproject
- * @author   Yakov Medvedev <yakovmedvedev@gmail.com>
- * @license  https://github.com/yakovmedvedev/php-project-45 MIT
- * @link     https://github.com/yakovmedvedev/php-project-45
- */
+//CLI-game. Math operations
 
 namespace BrainGames\Games\CalcGame;
 
@@ -19,7 +10,6 @@ use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\QUESTIONS_NUM;
 
-//Game logic
 function runCalcGame(): void
 {
     $description = "What is the result of the expression?";

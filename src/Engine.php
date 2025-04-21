@@ -1,6 +1,7 @@
 <?php
 
 //CLI-games common logic
+
 namespace BrainGames\Engine;
 
 use function cli\line;

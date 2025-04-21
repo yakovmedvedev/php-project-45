@@ -1,6 +1,6 @@
 <?php
 
-//CLI-game. Is number even
+//CLI-game. Is a number even
 
 namespace BrainGames\Games\EvenGame;
 

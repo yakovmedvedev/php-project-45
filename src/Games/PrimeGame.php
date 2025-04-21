@@ -1,15 +1,7 @@
 <?php
 
-/**
- * CLI-game. Prime number
- * PHP version 8.3.6
- *
- * @category CLI-games
- * @package  Games_Of_Mindproject
- * @author   Yakov Medvedev <yakovmedvedev@gmail.com>
- * @license  https://github.com/yakovmedvedev/php-project-45 MIT
- * @link     https://github.com/yakovmedvedev/php-project-45
- */
+
+//CLI-game. Prime number
 
 namespace BrainGames\Games\PrimeGame;
 
@@ -19,8 +11,7 @@ use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\QUESTIONS_NUM;
 
-//Checking wether a number is prime
-function isPrime(int $number)
+function isPrime(int $number): bool
 {
     if ($number < 2) {
         return false;
@@ -32,7 +23,7 @@ function isPrime(int $number)
     }
     return true;
 }
-//Game logic
+
 function runPrimeGame(): void
 {
     $description = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";

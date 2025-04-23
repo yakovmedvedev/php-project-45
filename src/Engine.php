@@ -9,12 +9,17 @@ use function cli\prompt;
 
 const QUESTIONS_NUM = 3;
 
-function runEngine(string $description, array $data): void
+function greetUser(): string
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
     line("Hello, $name!");
+    return $name;
+}
 
+function runEngine(string $description, array $data): void
+{
+    $name = greetUser();
     line($description);
 
     foreach ($data as $question => $rightAnswer) {

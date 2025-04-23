@@ -19,8 +19,8 @@ function findGcd(int $numberOne, int $numberTwo): int
         $temp = $numberTwo;
         $numberTwo = $numberOne % $numberTwo;
         $numberOne = $temp;
-}
-return $numberOne;
+    }
+    return $numberOne;
 }
 
 function runGcdGame(): void

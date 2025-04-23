@@ -10,6 +10,13 @@ use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\QUESTIONS_NUM;
 
+const MIN_LENGTH_VALUE = 5;
+const MAX_LENGTH_VALUE = 10;
+const MIN_STEP_VALUE = 1;
+const MAX_STEP_VALUE = 10;
+const MIN_START_NUMBER = 1;
+const MAX_START_NUMBER = 100;
+
 function progression(int $startNumber, int $progStep, int $progLength): array
 {
     $progression = [];
@@ -24,9 +31,9 @@ function runProgGame(): void
     $data = [];
 
     for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
-        $progLength = rand(5, 10);
-        $progStep = rand(1, 10);
-        $startNumber = rand(1, 100);
+        $progLength = rand(MIN_LENGTH_VALUE, MAX_LENGTH_VALUE);
+        $progStep = rand(MIN_STEP_VALUE, MAX_STEP_VALUE);
+        $startNumber = rand(MIN_START_NUMBER, MAX_START_NUMBER);
         $progression = progression($startNumber, $progStep, $progLength);
 
         $hiddenIndex = rand(0, $progLength - 1);

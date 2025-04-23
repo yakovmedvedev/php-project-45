@@ -10,6 +10,27 @@ use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\QUESTIONS_NUM;
 
+const MIN_VALUE = 1;
+const MAX_VALUE = 10;
+
+function calculate(int $numberOne, int $numberTwo, string $operation): int
+{
+    switch ($operation) {
+        case '+':
+            $rightAnswer = $numberOne + $numberTwo;
+            break;
+        case '-':
+            $rightAnswer = $numberOne - $numberTwo;
+            break;
+        case '*':
+            $rightAnswer = $numberOne * $numberTwo;
+            break;
+        default:
+            break;
+    }
+    return $rightAnswer;
+}
+
 function runCalcGame(): void
 {
     $description = "What is the result of the expression?";
@@ -19,26 +40,12 @@ function runCalcGame(): void
         $operators = ['+', '-', '*'];
         $operatorsRandomKey = array_rand($operators);
         $operation = $operators[$operatorsRandomKey];
-        $numberOne = rand(1, 10);
-        $numberTwo = rand(1, 10);
-        $rightAnswer = '';
+        $numberOne = rand(MIN_VALUE, MAX_VALUE);
+        $numberTwo = rand(MIN_VALUE, MAX_VALUE);
 
-        switch ($operation) {
-            case '+':
-                $rightAnswer = $numberOne + $numberTwo;
-                break;
-            case '-':
-                $rightAnswer = $numberOne - $numberTwo;
-                break;
-            case '*':
-                $rightAnswer = $numberOne * $numberTwo;
-                break;
-            default:
-                break;
-        }
-
+        $rightAnswer = calculate($numberOne, $numberTwo, $operation);
         $question = "{$numberOne} {$operation} {$numberTwo}";
-        $data += [$question => $rightAnswer];
+        $data[$question] = $rightAnswer;
     }
     runEngine($description, $data);
 }

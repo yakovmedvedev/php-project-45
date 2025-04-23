@@ -1,6 +1,6 @@
 <?php
 
-//CLI-game. Is a number even
+//CLI-game. Is a number even?
 
 namespace BrainGames\Games\EvenGame;
 
@@ -9,6 +9,9 @@ use BrainGames\Engine;
 use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\QUESTIONS_NUM;
+
+const MIN_VALUE = 1;
+const MAX_VALUE = 100;
 
 function isEven(int $number): bool
 {
@@ -21,10 +24,10 @@ function runEvenGame(): void
     $data = [];
 
     for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
-        $question = rand(1, 100);
+        $question = rand(MIN_VALUE, MAX_VALUE);
         $rightAnswer = isEven($question) ? 'yes' : 'no';
 
-        $data += [$question => $rightAnswer];
+        $data[$question] = $rightAnswer;
     }
     runEngine($description, $data);
 }

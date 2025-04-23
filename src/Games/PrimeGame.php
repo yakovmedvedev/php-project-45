@@ -10,6 +10,9 @@ use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\QUESTIONS_NUM;
 
+const MIN_VALUE = 1;
+const MAX_VALUE = 100;
+
 function isPrime(int $number): bool
 {
     if ($number < 2) {
@@ -29,11 +32,11 @@ function runPrimeGame(): void
     $data = [];
 
     for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
-        $randomNumber = rand(1, 100);
+        $randomNumber = rand(MIN_VALUE, MAX_VALUE);
         $question = $randomNumber;
         $rightAnswer = isPrime($randomNumber) ? 'yes' : 'no';
 
-        $data += [$question => $rightAnswer];
+        $data[$question] = $rightAnswer;
     }
     runEngine($description, $data);
 }

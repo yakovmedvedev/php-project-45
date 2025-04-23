@@ -1,7 +1,6 @@
 <?php
 
-// CLI-game. Greeting a user
-
+//CLI-game. Greeting a user
 
  namespace BrainGames\Cli;
 

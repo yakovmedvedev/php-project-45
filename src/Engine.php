@@ -9,17 +9,12 @@ use function cli\prompt;
 
 const QUESTIONS_NUM = 3;
 
-function greetUser(): string
+function runEngine(string $description, array $data): void
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
     line("Hello, $name!");
-    return $name;
-}
 
-function runEngine(string $description, array $data): void
-{
-    $name = greetUser();
     line($description);
 
     foreach ($data as $question => $rightAnswer) {
@@ -27,23 +22,12 @@ function runEngine(string $description, array $data): void
 
         $userAnswer = prompt("Your answer");
 
-        checkUserAnswer($userAnswer, $rightAnswer, $name);
+        if ($userAnswer == $rightAnswer) {
+            line("Correct!\n");
+        } else {
+            line("\033[91m'$userAnswer' is wrong answer ;(. Correct answer was '$rightAnswer'. Let's try again, $name!\nBye-bye!");
+            return;
+        }
     }
-    finishGame($name);
-}
-
-function checkUserAnswer(string $userAnswer, string $rightAnswer, string $name): ?string
-{
-    if ($userAnswer === $rightAnswer) {
-        return line("Correct!\n");
-    } else {
-        line("\033[91m'$userAnswer' is wrong answer ;(. Correct answer was '$rightAnswer'. Let's try again, $name!\n");
-        exit("Bye-bye!\n");
-    }
-}
-
-function finishGame(string $name): void
-{
     line("\033[92mCongratulations, %s!", $name);
-    exit("Bye-bye!\n");
 }

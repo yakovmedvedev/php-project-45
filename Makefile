@@ -27,10 +27,6 @@ update:
 	composer update
 
 lint:
-	composer exec --verbose phpcs -- --standard=PSR12 src bin
 	vendor/bin/phpstan analyse
-
-lint-fix:
-	composer exec -v phpcbf -- --standard=PSR12 --colors src bin
 
 .PHONY: brain-games brain-even brain-calc brain-gcd brain-progression brain-prime

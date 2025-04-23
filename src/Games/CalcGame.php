@@ -15,6 +15,7 @@ const MAX_VALUE = 10;
 
 function calculate(int $numberOne, int $numberTwo, string $operation): int
 {
+    $rightAnswer = 0;
     switch ($operation) {
         case '+':
             $rightAnswer = $numberOne + $numberTwo;

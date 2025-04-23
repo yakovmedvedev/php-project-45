@@ -41,8 +41,8 @@ function runCalcGame(): void
         $operators = ['+', '-', '*'];
         $operatorsRandomKey = array_rand($operators);
         $operation = $operators[$operatorsRandomKey];
-        $numberOne = rand(MIN_VALUE, MAX_VALUE);
-        $numberTwo = rand(MIN_VALUE, MAX_VALUE);
+        $numberOne = random_int(MIN_VALUE, MAX_VALUE);
+        $numberTwo = random_int(MIN_VALUE, MAX_VALUE);
 
         $rightAnswer = calculate($numberOne, $numberTwo, $operation);
         $question = "{$numberOne} {$operation} {$numberTwo}";

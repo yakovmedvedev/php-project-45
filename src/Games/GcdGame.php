@@ -29,8 +29,8 @@ function runGcdGame(): void
     $data = [];
 
     for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
-        $numberOne = rand(MIN_VALUE, MAX_VALUE);
-        $numberTwo = rand(MIN_VALUE, MAX_VALUE);
+        $numberOne = random_int(MIN_VALUE, MAX_VALUE);
+        $numberTwo = random_int(MIN_VALUE, MAX_VALUE);
         $question = "$numberOne $numberTwo";
 
         $rightAnswer = findGcd($numberOne, $numberTwo);

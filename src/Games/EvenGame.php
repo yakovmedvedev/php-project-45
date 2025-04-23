@@ -24,7 +24,7 @@ function runEvenGame(): void
     $data = [];
 
     for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
-        $question = rand(MIN_VALUE, MAX_VALUE);
+        $question = random_int(MIN_VALUE, MAX_VALUE);
         $rightAnswer = isEven($question) ? 'yes' : 'no';
 
         $data[$question] = $rightAnswer;

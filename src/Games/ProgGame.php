@@ -31,9 +31,9 @@ function runProgGame(): void
     $data = [];
 
     for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
-        $progLength = rand(MIN_LENGTH_VALUE, MAX_LENGTH_VALUE);
-        $progStep = rand(MIN_STEP_VALUE, MAX_STEP_VALUE);
-        $startNumber = rand(MIN_START_NUMBER, MAX_START_NUMBER);
+        $progLength = random_int(MIN_LENGTH_VALUE, MAX_LENGTH_VALUE);
+        $progStep = random_int(MIN_STEP_VALUE, MAX_STEP_VALUE);
+        $startNumber = random_int(MIN_START_NUMBER, MAX_START_NUMBER);
         $progression = progression($startNumber, $progStep, $progLength);
 
         $hiddenIndex = rand(0, $progLength - 1);

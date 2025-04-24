@@ -37,7 +37,7 @@ function runProgGame(): void
         $progression = progression($startNumber, $progStep, $progLength);
 
         $hiddenIndex = rand(0, $progLength - 1);
-        $rightAnswer = $progression[$hiddenIndex];
+        $rightAnswer = (string) $progression[$hiddenIndex];
         $progression[$hiddenIndex] = '..';
 
         $question = implode(' ', $progression);

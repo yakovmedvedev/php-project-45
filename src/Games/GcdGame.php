@@ -33,7 +33,7 @@ function runGcdGame(): void
         $numberTwo = random_int(MIN_VALUE, MAX_VALUE);
         $question = "$numberOne $numberTwo";
 
-        $rightAnswer = findGcd($numberOne, $numberTwo);
+        $rightAnswer = (string) findGcd($numberOne, $numberTwo);
         $data[$question] = $rightAnswer;
     }
     runEngine($description, $data);

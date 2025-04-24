@@ -44,7 +44,7 @@ function runCalcGame(): void
         $numberOne = random_int(MIN_VALUE, MAX_VALUE);
         $numberTwo = random_int(MIN_VALUE, MAX_VALUE);
 
-        $rightAnswer = calculate($numberOne, $numberTwo, $operation);
+        $rightAnswer = (string) calculate($numberOne, $numberTwo, $operation);
         $question = "{$numberOne} {$operation} {$numberTwo}";
         $data[$question] = $rightAnswer;
     }

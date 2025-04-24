@@ -1,0 +1,11 @@
+- name: SonarQube Scan
+  uses: SonarSource/sonarqube-scan-action@v5
+  env:
+    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  with:
+    # NOTE: https://sonarcloud.io/project/information?id=<organization>_<reponame>
+    args: >
+      -Dsonar.projectKey=yakovmedvedev_php-project-45
+      -Dsonar.organization=yakovmedvedev
+      -Dsonar.sources=src/
+      -Dsonar.php.coverage.reportPaths=build/logs/clover.xml

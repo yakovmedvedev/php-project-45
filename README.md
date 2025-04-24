@@ -1,5 +1,9 @@
 ### SonarQube
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=yakovmedvedev_php-project-45&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=yakovmedvedev_php-project-45)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=yakovmedvedev_php-project-45&metric=bugs)](https://sonarcloud.io/summary/new_code?id=yakovmedvedev_php-project-45)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=yakovmedvedev_php-project-45&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=yakovmedvedev_php-project-45)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=yakovmedvedev_php-project-45&metric=coverage)](https://sonarcloud.io/summary/new_code?id=yakovmedvedev_php-project-45)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=yakovmedvedev_php-project-45&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=yakovmedvedev_php-project-45)
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/yakovmedvedev/php-project-45/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/yakovmedvedev/php-project-45/actions)

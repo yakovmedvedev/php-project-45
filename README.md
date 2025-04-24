@@ -42,13 +42,13 @@
 [![asciicast](https://asciinema.org/a/TOZyKsNVQGf5pUCjtkEEv1RQG.svg)](https://asciinema.org/a/TOZyKsNVQGf5pUCjtkEEv1RQG)
 
 ### Terminal session with [make brain-calc]
-https://asciinema.org/a/qIfmCxo5TEGYBsML9j74hN6Tp
+[![asciicast](https://asciinema.org/a/qbCGP37FA4Q2w0YBNNh8FcjJx.svg)](https://asciinema.org/a/qbCGP37FA4Q2w0YBNNh8FcjJx)
 
 ### Terminal session with [make brain-gcd]
-https://asciinema.org/a/8bdQwqhOCfMRREEjhgAjNd65E
+[![asciicast](https://asciinema.org/a/DcHt8atpwNPQXHWagBpeCkfUh.svg)](https://asciinema.org/a/DcHt8atpwNPQXHWagBpeCkfUh)
 
 ### Terminal session with [make brain-progression]
-https://asciinema.org/a/MMchlHhVveUNxRJzTZaoxgt36
+[![asciicast](https://asciinema.org/a/AbJF2uHQlo6zzbeYusbSAyMbw.svg)](https://asciinema.org/a/AbJF2uHQlo6zzbeYusbSAyMbw)
 
 ### Terminal session with [make brain-prime]
-https://asciinema.org/a/zTOR2mmmgFUZSOe0iZluJfN04
+[![asciicast](https://asciinema.org/a/B3HPRjodiF2A3hQOwq5ASDk2g.svg)](https://asciinema.org/a/B3HPRjodiF2A3hQOwq5ASDk2g)

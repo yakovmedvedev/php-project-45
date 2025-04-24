@@ -30,7 +30,8 @@ function runEngine(string $description, array $data): void
         if ($userAnswer === $rightAnswer) {
             line("Correct!\n");
         } else {
-            line("\033[91m'$userAnswer' is wrong answer ;(. Correct answer was '$rightAnswer'. Let's try again, $name!\nBye-bye!");
+            line("\033[91m'$userAnswer' is wrong answer ;(. Correct answer was '$rightAnswer'.");
+            line("Let's try again, $name!\nBye-bye!");
             return;
         }
     }

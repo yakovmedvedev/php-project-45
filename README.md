@@ -34,7 +34,9 @@
 <p>Наличие на компьютере ОС Linux и PHP не ниже 7 версии.</p>
 
 ### Установка:
-<p>Для установки используется команда make install, запускающая composer install.</p>
+<ol><li>git clone git@github.com:yakovmedvedev/php-project-45.git</li>
+<li>cd php-project-45</li>
+<li>make install (composer install).</li></ol>
 
 ### Terminal session with [make install] and [make brain-even]
 https://asciinema.org/a/Ifgc8gCK9N8e0W8egsdBwWOKI

@@ -39,7 +39,7 @@
 <li>make install (composer install).</li></ol>
 
 ### Terminal session with [make install] and [make brain-even]
-https://asciinema.org/a/Ifgc8gCK9N8e0W8egsdBwWOKI
+<script src="https://asciinema.org/a/TOZyKsNVQGf5pUCjtkEEv1RQG.js" id="asciicast-TOZyKsNVQGf5pUCjtkEEv1RQG" async="true"></script>
 
 ### Terminal session with [make brain-calc]
 https://asciinema.org/a/qIfmCxo5TEGYBsML9j74hN6Tp

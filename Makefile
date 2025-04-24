@@ -28,5 +28,6 @@ update:
 
 lint:
 	vendor/bin/phpstan analyse
+	composer exec --verbose phpcs -- --standard=PSR12 --colors src bin
 
 .PHONY: brain-games brain-even brain-calc brain-gcd brain-progression brain-prime

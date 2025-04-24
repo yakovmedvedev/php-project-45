@@ -34,7 +34,7 @@ function runPrimeGame(): void
     for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
         $randomNumber = random_int(MIN_VALUE, MAX_VALUE);
         $question = $randomNumber;
-        $rightAnswer = (string) isPrime($randomNumber) ? 'yes' : 'no';
+        $rightAnswer = isPrime($randomNumber) ? ('yes') : ('no');
 
         $data[$question] = $rightAnswer;
     }

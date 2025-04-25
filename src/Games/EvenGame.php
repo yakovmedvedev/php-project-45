@@ -11,7 +11,7 @@ use function BrainGames\Engine\runEngine;
 use const BrainGames\Engine\ROUND_COUNT;
 
 const MIN_NUMBER = 1;
-const MAX_NUMBE = 100;
+const MAX_NUMBER = 100;
 
 function isEven(int $number): bool
 {

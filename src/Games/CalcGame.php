@@ -10,6 +10,7 @@ use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\ROUND_COUNT;
 
+const GAME_DESCRIPTION = 'What is the result of the expression?';
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 10;
 
@@ -34,7 +35,7 @@ function calculate(int $numberOne, int $numberTwo, string $operation): int
 
 function runCalculationGame(): void
 {
-    $description = "What is the result of the expression?";
+    $description = GAME_DESCRIPTION;
     $data = [];
 
     for ($rightAnswers = 0; $rightAnswers < ROUND_COUNT; $rightAnswers++) {

@@ -10,33 +10,33 @@ use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\QUESTIONS_NUM;
 
-const MIN_LENGTH_VALUE = 5;
-const MAX_LENGTH_VALUE = 10;
-const MIN_STEP_VALUE = 1;
-const MAX_STEP_VALUE = 10;
+const MIN_PROGRESSION_LENGTH = 5;
+const MAX_PROGRESSION_LENGTH = 10;
+const MIN_STEPS_NUMBER = 1;
+const MAX_STEPS_NUMBER = 10;
 const MIN_START_NUMBER = 1;
 const MAX_START_NUMBER = 100;
 
-function progression(int $startNumber, int $progStep, int $progLength): array
+function progression(int $startNumber, int $progressionStep, int $progressionLength): array
 {
     $progression = [];
-    for ($i = 0; $i < $progLength; $i++) {
-        $progression[] = $startNumber + ($i * $progStep);
+    for ($i = 0; $i < $progressionLength; $i++) {
+        $progression[] = $startNumber + ($i * $progressionStep);
     } return $progression;
 }
 
-function runProgGame(): void
+function runProgressionGame(): void
 {
     $description = "What number is missing in the progression?";
     $data = [];
 
     for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
-        $progLength = random_int(MIN_LENGTH_VALUE, MAX_LENGTH_VALUE);
-        $progStep = random_int(MIN_STEP_VALUE, MAX_STEP_VALUE);
+        $progressionLength = random_int(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH);
+        $progressionStep = random_int(MIN_STEPS_NUMBER, MAX_STEPS_NUMBER);
         $startNumber = random_int(MIN_START_NUMBER, MAX_START_NUMBER);
-        $progression = progression($startNumber, $progStep, $progLength);
+        $progression = progression($startNumber, $progressionStep, $progressionLength);
 
-        $hiddenIndex = random_int(0, $progLength - 1);
+        $hiddenIndex = random_int(0, $progressionLength - 1);
         $rightAnswer = (string) $progression[$hiddenIndex];
         $progression[$hiddenIndex] = '..';
 

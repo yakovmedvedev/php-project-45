@@ -10,8 +10,8 @@ use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\QUESTIONS_NUM;
 
-const MIN_NUMBER_VALUE = 1;
-const MAX_NUMBER_VALUE = 10;
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 10;
 
 function calculate(int $numberOne, int $numberTwo, string $operation): int
 {
@@ -37,12 +37,12 @@ function runCalculationGame(): void
     $description = "What is the result of the expression?";
     $data = [];
 
-    for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
+    for ($rightAnswers = 0; $rightAnswers < ROUND_COUNT; $rightAnswers++) {
         $operators = ['+', '-', '*'];
         $operatorsRandomKey = array_rand($operators);
         $operation = $operators[$operatorsRandomKey];
-        $numberOne = random_int(MIN_NUMBER_VALUE, MAX_NUMBER_VALUE);
-        $numberTwo = random_int(MIN_NUMBER_VALUE, MAX_NUMBER_VALUE);
+        $numberOne = random_int(MIN_NUMBER, MAX_NUMBER);
+        $numberTwo = random_int(MIN_NUMBER, MAX_NUMBER);
 
         $rightAnswer = (string) calculate($numberOne, $numberTwo, $operation);
         $question = "{$numberOne} {$operation} {$numberTwo}";

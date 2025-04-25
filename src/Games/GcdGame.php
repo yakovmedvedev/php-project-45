@@ -10,8 +10,8 @@ use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\QUESTIONS_NUM;
 
-const MIN_NUMBER_VALUE = 0;
-const MAX_NUMBER_VALUE = 100;
+const MIN_NUMBER = 0;
+const MAX_NUMBER = 100;
 
 function isGcd(int $numberOne, int $numberTwo): int
 {
@@ -28,9 +28,9 @@ function runGcdGame(): void
     $description = "Find the greatest common divisor of given numbers.";
     $data = [];
 
-    for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
-        $numberOne = random_int(MIN_NUMBER_VALUE, MAX_NUMBER_VALUE);
-        $numberTwo = random_int(MIN_NUMBER_VALUE, MAX_NUMBER_VALUE);
+    for ($rightAnswers = 0; $rightAnswers < ROUND_COUNT; $rightAnswers++) {
+        $numberOne = random_int(MIN_NUMBER, MAX_NUMBER);
+        $numberTwo = random_int(MIN_NUMBER, MAX_NUMBER);
         $question = "$numberOne $numberTwo";
 
         $rightAnswer = (string) isGcd($numberOne, $numberTwo);

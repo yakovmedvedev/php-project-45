@@ -30,7 +30,7 @@ function runProgressionGame(): void
     $description = "What number is missing in the progression?";
     $data = [];
 
-    for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
+    for ($rightAnswers = 0; $rightAnswers < ROUND_COUNT; $rightAnswers++) {
         $progressionLength = random_int(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH);
         $progressionStep = random_int(MIN_STEPS_NUMBER, MAX_STEPS_NUMBER);
         $startNumber = random_int(MIN_START_NUMBER, MAX_START_NUMBER);

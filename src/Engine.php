@@ -7,7 +7,7 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-const QUESTIONS_NUM = 3;
+const ROUND_COUNT = 3;
 
 function greetUser(): string
 {

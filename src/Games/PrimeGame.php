@@ -4,8 +4,6 @@
 
 namespace BrainGames\Games\PrimeGame;
 
-use BrainGames\Engine;
-
 use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\ROUND_COUNT;
@@ -32,7 +30,7 @@ function runPrimeNumberGame(): void
     $description = GAME_DESCRIPTION;
     $data = [];
 
-    for ($rightAnswers = 0; $rightAnswers < ROUND_COUNT; $rightAnswers++) {
+    for ($i = 0; $i < ROUND_COUNT; $i++) {
         $randomNumber = random_int(MIN_NUMBER, MAX_NUMBER);
         $question = $randomNumber;
         $rightAnswer = isPrimeNumber($randomNumber) ? ('yes') : ('no');

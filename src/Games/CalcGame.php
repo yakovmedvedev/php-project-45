@@ -4,8 +4,6 @@
 
 namespace BrainGames\Games\CalcGame;
 
-use BrainGames\Engine;
-
 use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\ROUND_COUNT;
@@ -37,9 +35,9 @@ function runCalculationGame(): void
 {
     $description = GAME_DESCRIPTION;
     $data = [];
+    $operators = ['+', '-', '*'];
 
-    for ($rightAnswers = 0; $rightAnswers < ROUND_COUNT; $rightAnswers++) {
-        $operators = ['+', '-', '*'];
+    for ($i = 0; $i < ROUND_COUNT; $i++) {
         $operatorsRandomKey = array_rand($operators);
         $operation = $operators[$operatorsRandomKey];
         $numberOne = random_int(MIN_NUMBER, MAX_NUMBER);

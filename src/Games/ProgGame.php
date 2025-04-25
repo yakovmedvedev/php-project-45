@@ -4,8 +4,6 @@
 
 namespace BrainGames\Games\ProgGame;
 
-use BrainGames\Engine;
-
 use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\ROUND_COUNT;
@@ -18,24 +16,17 @@ const PROGRESSION_MAX_STEP = 10;
 const MIN_START_NUMBER = 1;
 const MAX_START_NUMBER = 100;
 
-function progression(int $startNumber, int $progressionStep, int $progressionLength): array
-{
-    $progression = [];
-    for ($i = 0; $i < $progressionLength; $i++) {
-        $progression[] = $startNumber + ($i * $progressionStep);
-    } return $progression;
-}
-
 function runProgressionGame(): void
 {
     $description = GAME_DESCRIPTION;
     $data = [];
 
-    for ($rightAnswers = 0; $rightAnswers < ROUND_COUNT; $rightAnswers++) {
+    for ($i = 0; $i < ROUND_COUNT; $i++) {
         $progressionLength = random_int(PROGRESSION_MIN_COUNT, PROGRESSION_MAX_COUNT);
         $progressionStep = random_int(PROGRESSION_MIN_STEP, PROGRESSION_MAX_STEP);
         $startNumber = random_int(MIN_START_NUMBER, MAX_START_NUMBER);
-        $progression = progression($startNumber, $progressionStep, $progressionLength);
+        $endNumber = $startNumber + ($progressionLength * $progressionStep);
+        $progression = range($startNumber, $endNumber, $progressionStep);
 
         $hiddenIndex = random_int(0, $progressionLength - 1);
         $rightAnswer = (string) $progression[$hiddenIndex];

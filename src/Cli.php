@@ -4,8 +4,6 @@
 
  namespace BrainGames\Cli;
 
- use BrainGames\Engine;
-
  use function BrainGames\Engine\greetUser;
 
 //Game logic

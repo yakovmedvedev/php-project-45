@@ -10,8 +10,8 @@ use function BrainGames\Engine\runEngine;
 
 use const BrainGames\Engine\QUESTIONS_NUM;
 
-const MIN_VALUE = 1;
-const MAX_VALUE = 100;
+const MIN_NUMBER_VALUE = 1;
+const MAX_NUMBER_VALUE = 100;
 
 function isEven(int $number): bool
 {
@@ -24,7 +24,7 @@ function runEvenGame(): void
     $data = [];
 
     for ($rightAnswers = 0; $rightAnswers < QUESTIONS_NUM; $rightAnswers++) {
-        $question = random_int(MIN_VALUE, MAX_VALUE);
+        $question = random_int(MIN_NUMBER_VALUE, MAX_NUMBER_VALUE);
         $rightAnswer = isEven($question) ? ('yes') : ('no');
 
         $data[$question] = $rightAnswer;

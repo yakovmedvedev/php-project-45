@@ -2,7 +2,7 @@
 
 //CLI-game. Progression number
 
-namespace BrainGames\Games\ProgGame;
+namespace BrainGames\Games\ProgressionGame;
 
 use function BrainGames\Engine\runEngine;
 

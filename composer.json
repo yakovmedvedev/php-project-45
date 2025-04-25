@@ -15,7 +15,7 @@
                 "src/Games/EvenGame.php",
                 "src/Games/CalcGame.php",
                 "src/Games/GcdGame.php",
-		        "src/Games/ProgGame.php",
+		        "src/Games/ProgressionGame.php",
                 "src/Games/PrimeGame.php"
             ]
     },

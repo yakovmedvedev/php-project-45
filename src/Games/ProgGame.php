@@ -8,7 +8,7 @@ use BrainGames\Engine;
 
 use function BrainGames\Engine\runEngine;
 
-use const BrainGames\Engine\QUESTIONS_NUM;
+use const BrainGames\Engine\ROUND_COUNT;
 
 const MIN_PROGRESSION_LENGTH = 5;
 const MAX_PROGRESSION_LENGTH = 10;
